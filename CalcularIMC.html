@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Programa IMC</title>
+        <style>
+            @keyframes container {
+                from {margin-top: 0%}
+                to {margin-top: 19%}
+            }
+            body{
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+          
+                animation: container 1s 1;
+                animation-direction: alternate-reverse;
+
+                padding: 2px 8px;
+                margin: 0 auto;
+                margin-top: 0%;
+                /* background: #f5f5f5; */
+                width: 600px;
+            }
+
+            input {
+                outline: 0; /*remove o modo de seleção*/
+                background: #ededed; 
+                border: 1px solid #ededed;
+                border-radius: 4px 0px 0px 4px;
+                height: 52px;
+                width: 180px;
+                padding-left: 15px;
+
+
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                border-bottom: 1px solid rgba(0,0,0,.1);
+               
+            }
+            li>div {
+               margin-right: 18px;
+               margin-bottom: 18px;
+            }
+           
+            #right-CM {
+                border: 1px solid #ededed;
+                border-radius: 0px 4px 4px 0px;
+                line-height: 52px;
+                text-align: center;
+                background: #ffffff;
+                height: 54px;
+                width: 52px;
+                font-weight: 800;
+
+            }
+
+            #botao {
+                position: absolute;
+                font-weight: 800;
+                background: #203748 !important;
+                color:#ffffff;
+                margin-left: 40px;
+                padding: 13px 15px;
+                border-radius: 5px 5px 5px 5px;
+                cursor: pointer;
+                font-size: 20px;
+                text-align: center;
+               
+            }
+
+        
+
+            h3 {
+                color: #203748 !important;
+                font-size: 30px;
+                font-weight: 800;
+            }
+
+            #resultado { 
+                width: 600px;
+                margin: 0 auto;
+                margin-top: 15%;
+                text-align: center;
+
+            }
+
+            
+        </style>
+    
+    </head>
+    <body>
+        
+        <div id="resultado"></div>
+       
+        <div class="container">
+
+           
+           
+            <h3 style="text-align: center;">Calculator IMC</h3>
+            <ul>
+                <li> <input type="number" id="altura" value="nome" min="0" placeholder="altura"  onfocus="this.value=''" autocomplete="off"></li>
+                <li> <div id="right-CM">CM</div></li>   
+               
+                
+                <li> <input type="number" id="peso" value="nome" min="0" placeholder="peso" onfocus="this.value=''"  autocomplete="off"></li>
+                <li> <div id="right-CM">KG</div></li>   
+            
+            </ul>
+            
+            
+           
+            <input type="submit" id="botao" value="Calcular IMC" onclick="calculator()">
+            
+        </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>
